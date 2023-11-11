@@ -1,0 +1,21 @@
+function addTask() {
+    // Get the value of the input field
+    let taskInput = document.getElementById('task-input');
+    let task = taskInput.value.trim();
+
+    // Check if the task is not empty
+    if (task) {
+        // Create a new list item
+        let li = document.createElement('li');
+        li.textContent = task;
+
+        // Add the list item to the tasks list
+        document.getElementById('tasks-list').appendChild(li);
+
+        // Clear the input field
+        taskInput.value = '';
+    } else {
+        // Optionally alert the user or handle empty input
+        alert("Please enter a task.");
+    }
+}
